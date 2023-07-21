@@ -1,8 +1,4 @@
 import * as THREE from 'three';
-import * as S from 'stats.js';
-var stats = new S();
-stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
-document.body.appendChild( stats.dom );
 
 // GLOBAL DATA
 const G = {};
@@ -51,9 +47,7 @@ document.addEventListener("keydown", (event) => {
 
 function animate() {
 	requestAnimationFrame( animate );
-    stats.begin(); 
     update();
-    stats.end(); 
     render();
 }
 
